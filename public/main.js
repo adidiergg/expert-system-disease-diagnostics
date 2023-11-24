@@ -46,6 +46,17 @@ function showResult(message){
   chat.scrollTop = chat.scrollHeight;
   document.getElementById("yes").remove();
   document.getElementById("no").remove();
+  var menu = document.getElementById("menu");
+  var btnReset = document.createElement("a");
+  btnReset.href = "/run";
+  btnReset.className = "rounded-lg  border border-transparent  px-10 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30";
+  btnReset.rel = "noopener noreferrer";
+  contentReset = document.createElement("h2");
+  contentReset.className = "text-3xl text-primary font-bold";
+  contentReset.innerHTML = "Realizar otra consulta";
+  btnReset.appendChild(contentReset);
+  menu.appendChild(btnReset);
+
 }
 
   var timeout = async ms => new Promise(res => setTimeout(res, ms));

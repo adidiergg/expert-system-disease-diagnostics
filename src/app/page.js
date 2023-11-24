@@ -42,7 +42,7 @@ export default function Home() {
 
                   <div className="w-2/3 break-words">
                       <p className="animate-fade-up animate-duration-500 animate-delay-[1500ms]   font-medium text-sm lg:text-lg text-left text-primary border-b border-gray-300 bg-gradient-to-b from-zinc-200 p-4 backdrop-blur-2xl   rounded-xl rounded-bl-none lg:border lg:bg-gray-200  lg:dark:bg-zinc-800/30 ">
-                      Haz clic en "Iniciar" para comenzar tu evaluación.
+                      Haz clic en Iniciar para comenzar tu evaluación.
                       </p>
                   </div>
 

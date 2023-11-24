@@ -61,7 +61,7 @@ export default function Home() {
 
         <a
           href="/run"
-          className= "rounded-lg  border border-transparent  px-10 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          className= "animate-fade animate-duration-500 animate-delay-1000 rounded-lg  border border-transparent  px-10 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           rel="noopener noreferrer"
           >
           <h2 className={`text-3xl text-primary font-bold`}>

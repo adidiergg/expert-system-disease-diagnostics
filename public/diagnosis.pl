@@ -49,9 +49,150 @@
     hypothesis(lepra) :- lepra, !.
     hypothesis(diarrea) :- diarrea, !.
     hypothesis(tetanos) :- tetanos, !.
+    hypothesis(golpe_de_calor) :- golpe_de_calor, !.
+    hypothesis(pie_de_atleta) :- pie_de_atleta, !.
+    hypothesis(gastritis) :- gastritis, !.
+    hypothesis(asma) :- asma, !.
+    hypothesis(fibrosis_pulmonar) :- fibrosis_pulmonar, !.
+    hypothesis(edema_pulmonar) :- edema_pulmonar, !.
+    hypothesis(tos_ferina) :- tos_ferina, !.
+    hypothesis(gripe) :- gripe, !.
+    hypothesis(apnea_del_sueno) :- apnea_del_sueno, !.
+    hypothesis(gota) :- gota, !.
+    hypothesis(eccema) :- eccema, !.
+    hypothesis(estrenimiento) :- estrenimiento, !.
+    hypothesis(edema) :- edema, !.
+    hypothesis(neurotorax) :- neurotorax, !.
+    hypothesis(infarto_de_miocardio) :- infarto_de_miocardio, !.
+    hypothesis(difteria) :- difteria, !.
+    hypothesis(varices) :- varices, !.
     hypothesis(desconocido). /* no se puede diagnosticar */
 
+
+    
+
     % Reglas de identificacion de padecimientos
+
+    varices :- verify('Edemas (hinchazón) de pies'),
+    verify('Picazón en las piernas'),
+    verify('Sensación de piernas cansadas'),
+    verify('Calambres en las piernas'),
+
+
+    difteria :- verify('Fiebre'),
+    verify('Debilidad'),
+    verify('Escalofríos'),
+    verify('Dolor de garganta'),
+    verify('Dificultad para respirar'),
+    verify('Inflamación de los ganglios linfáticos'),
+    verify('Formación de una membrana grisácea en la garganta').
+
+
+    infarto_de_miocardio :- verify('Dolor de pecho'),
+    verify('Palidez'),
+    verify('Náuseas'),
+    verify('Vómito'),
+    verify('Fatiga'),
+    verify('Dificultad para respirar'),
+    verify('Sudoración excesiva'),
+    verify('Ansiedad').
+
+    neurotorax :- verify('Dificultad para respirar'),
+    verify('Tos'),
+    verify('Palidez'),
+    verify('Dolor de pecho'),
+    verify('Sudoración excesiva'),
+    verify('Hiperventilación'),
+    verify('Ansiedad'),
+    verify('Coloración azulada de la piel').
+
+
+
+
+
+
+
+    edema :- verify('Hinchazón'),
+    verify('Sensación de pesadez').
+
+    estrenimiento :- 
+    verify('Heces duras y secas'),
+    verify('Sensación de evacuación incompleta').
+
+
+    eccema :- verify('Enrojecimiento de la piel'),
+    verify('Costras'),
+    verify('Piel seca en escamas'),
+    verify('Picazón intensa'),
+    verify('Engrosamiento de la piel').
+
+    gota :- verify('Dolor articular(intenso)'),
+    verify('Hichazon en las articulaciones'),
+    verify('Enrojecimiento de la piel'),
+    verify('Limitación del rango de movimiento').
+
+    apnea_del_sueno :- verify('Dolor de cabeza'),
+    verify('Cansancio'),
+    verify('Ronquidos'),
+    verify('Boca seca al despertar'),
+    verify('Problemas de memoria y de concentración'),
+    verify('Somnolencia diurna').
+
+
+    gripe :- verify('Fiebre'),
+    verify('Dolor de cabeza'),
+    verify('Escalofríos'),
+    verify('Dolor muscular'),
+    verify('secresión nasal').
+
+    tos_ferina :- verify('Tos paroxística(agotadora y causa dolor)'),
+    verify('Fiebre'),
+    verify('Vómito'),
+    verify('Dificultad para respirar'),
+    verify('Secreción nasal').
+
+    edema_pulmonar :- verify('Dificultad para respirar'),
+    verify('Sudoración excesiva'),
+    verify('sibilancias (sonido silbante al respirar)'),
+    verify('Tos con sangre'),
+    verify('Ansiedad'),
+    verify('Piel Pálida').
+
+
+
+    fibrosis_pulmonar :- verify('Tos seca'),
+    verify('Cansancio'),
+    verify('Pérdida de peso'),
+    verify('Dolor muscular'),
+    verify('Dificultad para respirar'),
+    verify('Dolor articular(intenso)'),
+    verify('Edemas (hinchazón) de pies').
+
+
+    asma :- verify('Tos seca'),
+    verify('Dificultad para respirar'),
+    verify('Sibilancias (sonido silbante al respirar)'),
+    verify('Opresión en el pecho').
+
+
+    gastritis :- verify('Náuseas'), 
+    verify('Vómito'),
+    verify('Dolor abdominal'),
+    verify('Acidez estomacal').
+
+
+
+    pie_de_atleta :- verify('Mal olor proveniente de los pies'),
+    verify('Piel seca en escamas'),
+    verify('Picor (zona de los pies)').
+
+    golpe_de_calor :- verify('Dolor de cabeza'),
+    verify('Mareos'),
+    verify('Palpitaciones'),
+    verify('Sequedad y enrojecimiento de la piel'),
+    verify('Hiperventilación'),
+    verify('Síncope(pérdida relativamente brusca de la conciencia)').
+
 
 
     tetanos :- verify('Rigidez en los músculos de la mandíbula'),

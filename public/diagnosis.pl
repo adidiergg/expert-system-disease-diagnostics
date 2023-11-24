@@ -76,7 +76,7 @@
     varices :- verify('Edemas (hinchazón) de pies'),
     verify('Picazón en las piernas'),
     verify('Sensación de piernas cansadas'),
-    verify('Calambres en las piernas'),
+    verify('Calambres en las piernas').
 
 
     difteria :- verify('Fiebre'),

@@ -15,28 +15,19 @@
      
 
     % Hipotesis que se van a probar
-
-    hypothesis(zika) :- zika, !.
     hypothesis(coronavirus) :- coronavirus, !.
+    hypothesis(dengue) :- dengue, !.
+    hypothesis(zika) :- zika, !.
+    hypothesis(chikungunya) :- chikungunya, !.
     hypothesis(hepatitis) :- hepatitis, !.
     hypothesis(varicela) :- varicela, !.
-    hypothesis(chikungunya) :- chikungunya, !.
     hypothesis(arritmia) :- arritmia, !.
     hypothesis(gastroenteritis) :- gastroenteritis, !.
-    hypothesis(vph) :- vph, !.
     hypothesis(malaria) :- malaria, !.
     hypothesis(sarampion) :- sarampion, !. 
     hypothesis(anemia) :- anemia, !.
     hypothesis(neumonia) :- neumonia, !.
     hypothesis(paperas) :- paperas, !.
-    hypothesis(dengue) :- dengue, !.
-    hypothesis(ojo_seco) :- ojo_seco, !.
-    hypothesis(catarata) :- catarata, !.
-    hypothesis(conjuntivitis) :- conjuntivitis, !.
-    hypothesis(estrabismo) :- estrabismo, !.
-    hypothesis(glaucoma) :- glaucoma, !.
-    hypothesis(astigmatismo) :- astigmatismo, !.
-    hypothesis(miopia) :- miopia, !.
     hypothesis(amigdalitis) :- amigdalitis, !.
     hypothesis(hipoglucemia) :- hipoglucemia, !.
     hypothesis(cirrosis) :- cirrosis, !.
@@ -50,7 +41,6 @@
     hypothesis(diarrea) :- diarrea, !.
     hypothesis(tetanos) :- tetanos, !.
     hypothesis(golpe_de_calor) :- golpe_de_calor, !.
-    hypothesis(pie_de_atleta) :- pie_de_atleta, !.
     hypothesis(gastritis) :- gastritis, !.
     hypothesis(asma) :- asma, !.
     hypothesis(fibrosis_pulmonar) :- fibrosis_pulmonar, !.
@@ -60,12 +50,21 @@
     hypothesis(apnea_del_sueno) :- apnea_del_sueno, !.
     hypothesis(gota) :- gota, !.
     hypothesis(eccema) :- eccema, !.
-    hypothesis(estrenimiento) :- estrenimiento, !.
-    hypothesis(edema) :- edema, !.
     hypothesis(neurotorax) :- neurotorax, !.
     hypothesis(infarto_de_miocardio) :- infarto_de_miocardio, !.
     hypothesis(difteria) :- difteria, !.
     hypothesis(varices) :- varices, !.
+    hypothesis(ojo_seco) :- ojo_seco, !.
+    hypothesis(catarata) :- catarata, !.
+    hypothesis(conjuntivitis) :- conjuntivitis, !.
+    hypothesis(estrabismo) :- estrabismo, !.
+    hypothesis(glaucoma) :- glaucoma, !.
+    hypothesis(astigmatismo) :- astigmatismo, !.
+    hypothesis(miopia) :- miopia, !.
+    hypothesis(estrenimiento) :- estrenimiento, !.
+    hypothesis(edema) :- edema, !.
+    hypothesis(pie_de_atleta) :- pie_de_atleta, !.
+    hypothesis(vph) :- vph, !.
     hypothesis(desconocido). /* no se puede diagnosticar */
 
 
@@ -364,11 +363,11 @@
     verify('Dificultad para respirar').
 
     hepatitis :- 
-    verify('Ictericia'),
     verify('Náuseas'),
     verify('Vómito'),
     verify('Fatiga'),
     verify('Diarrea'),
+    verify('Ictericia'),
     verify('Dolor abdominal'),
     verify('Orina oscura').
 
@@ -383,10 +382,9 @@
 
 
 
-    malaria :- verify('Fiebre'),
+    malaria :- verify('Fiebre'),verify('Dolor de cabeza'),
     verify('Escalofríos'),
     verify('síntomas gripales(gripe)'),
-    verify('Dolor de cabeza'),
     verify('Vómito'),
     verify('Dolor muscular'),
     verify('hepatomegalia(agrandamiento del hígado)').
@@ -399,8 +397,7 @@
     verify('Diarrea'),
     verify('Dolor abdominal').
 
-    zika :- verify('Fiebre'),verify('Conjuntivitis'),
-    verify('Dolor de cabeza'),
+    zika :- verify('Fiebre'),verify('Dolor de cabeza'),verify('Conjuntivitis'),
     verify('Dolor muscular'),
     verify('Dolor de articulación'),
     verify('Sarpullido').
@@ -422,9 +419,9 @@
 
     chikungunya :- verify('Fiebre'),
     verify('Dolor de cabeza'),
+    verify('Dolor de articulación'),
     verify('Sarpullido'),
-    verify('Fatiga'),
-    verify('Dolor de articulación').
+    verify('Fatiga').
 
 
     arritmia :- verify('Palpitaciones'),
